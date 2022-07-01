@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
     // we should render all the posts here
     res.render('all-posts', { posts });
+    console.log(posts)
   } catch (err) {
     res.status(500).json(err);
   }
